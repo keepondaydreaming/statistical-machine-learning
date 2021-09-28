@@ -133,12 +133,11 @@ class ID3Tree:
         for i in range(5):
             if node.target:
                 return node.target
-            
+
             for child in node.children:
                 if data[node.feature] == child.value:
                     node = child
                     break
-
 
     def predict(self, data: pd.DataFrame) -> list[str]:
         results = []
@@ -162,20 +161,19 @@ if __name__ == "__main__":
     # Q2.2
     tree = ID3Tree()
     tree.fit(X, y)
-    #tree.traverse()
+    # tree.traverse()
 
     #
-    df_test = pd.read_csv('test.csv')
+    df_test = pd.read_csv("test.csv")
     X_test = df_test[features]
     y_test = df_test[target].values.reshape(-1).tolist()
 
     preds = tree.predict(X_test)
     print("ground truth: ", y_test)
     print("prediction: ", preds)
-    
+
     count = 0
     for gt, pred in zip(y_test, preds):
         if gt == pred:
             count += 1
     print("acc ", count / len(y_test))
-
