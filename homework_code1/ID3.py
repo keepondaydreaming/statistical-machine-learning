@@ -6,8 +6,6 @@ MSSV: 21025014
 You should understand your code
 """
 
-from typing import Iterable
-
 import numpy as np
 import pandas as pd
 
