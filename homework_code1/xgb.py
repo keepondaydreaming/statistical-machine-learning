@@ -1,10 +1,3 @@
-"""
-Name: Nguyen Duy Quang
-Class: K28
-MSSV: 21025014
-
-You should understand your code
-"""
 import numpy as np
 import pandas as pd
 import xgboost as xgb
